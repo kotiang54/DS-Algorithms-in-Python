@@ -1,0 +1,35 @@
+ 
+
+ TASK 0:
+ 
+ A List is an ordered data structure and searching for an element using an index in a List has a constant time complexity. 
+ Thus Task0 has a O(1).
+ 
+ TASK 1:
+ 
+ My solution involves curating a list of telephone numbers from texts and calls. If the length of texts data is m and calls is n.
+ The solution consists of two consecutive 'for loops' where each loop runs for either m or n iterations. Time complexity is therefore O(m + n).
+ 
+ TASK 2:
+ 
+ My solution to Task 2 consists of obtaining a list of calls durations using a 'for loop' that incurs a computation cost of order O(n), where n is the length of calls data. Also obtaining the maximum duration of calls from the list using python max function is of order O(n). 
+ 
+ Therefore, my solution incurs a worst-case Big-O of O(n).
+ 
+ TASK 3:
+ 
+ In Task 3, the function "calls_from_Bangalore" involves two parts. The first part concerns obtaining a list of codes and prefixes of telephones numbers using a "for loop" which incurs a time-complexity of O(n). 
+ The second part involves sorting the list lexicographically using python Samplesort, list.sort(), which has a worst-case time-complexity of O(n log n).
+ 
+ Therefore, at most, my solution's computation cost grows with O(n log n) largely due to the sorting operation.
+ 
+ The function "percentage_calls" involves counting the number of calls from Bangalore fixed lines using a "for loop" which incurs a worst-case time-complexity of O(n). 
+ 
+ 
+ TASK 4:
+ 
+ The problem identifies possible telemarketers in the calls and text data. My solution consists of three consecutive "for loops" that involves curating telephone number records. If the length of calls data is n and length of texts data is m. The total complexity of the for loops is O(2n + m), which simplifies to O(n+m).
+ 
+ The possible telemarketers list is then sorted using the python Samplesort function, list.sort(), which has a worst-case time-complexity of O(n log n).
+ 
+ Thus, in worst-case scenario, my solution incurs a computation cost of O(n log n), since O(n log n) > O(n + m).
