@@ -23,14 +23,26 @@ September 2016.".
 def longest_call_duration(calls):
     """Function that returns the index of maximum call duration """
     
-    time_list = []
+    time_dict = {}    
     for i in range(len(calls)):
-        time_list.append(int(calls[i][-1]))
+        call_duration = int(calls[i][-1])
+        
+        if calls[i][0] in time_dict:  # calling telephone number
+            time_dict[calls[i][0]] += call_duration
+
+        else:
+            time_dict[calls[i][0]] = call_duration
+ 
+        if calls[i][1] in time_dict:  # receiving telephone number
+            time_dict[calls[i][1]] += call_duration 
+                
+        else: 
+            time_dict[calls[i][1]] = call_duration
     
-    max_index = time_list.index(max(time_list))
+    phone_number = max(time_dict, key = time_dict.get)
     
-    return max_index 
+    return phone_number, time_dict[phone_number] 
     
-call_record = calls[longest_call_duration(calls)]
+phone_num, duration = longest_call_duration(calls)
     
-print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(call_record[0], call_record[-1]))
+print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(phone_num, duration))
