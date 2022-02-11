@@ -19,28 +19,19 @@ Print a message:
 "<telephone number> spent the longest time, <total time> seconds, on the phone during 
 September 2016.".
 """
+from collections import defaultdict
 
 def longest_call_duration(calls):
     """Function that returns the index of maximum call duration """
     
-    time_dict = {}    
+    time_dict = defaultdict(int)
     for i in range(len(calls)):
         call_duration = int(calls[i][-1])
-        
-        if calls[i][0] in time_dict:  # calling telephone number
-            time_dict[calls[i][0]] += call_duration
-
-        else:
-            time_dict[calls[i][0]] = call_duration
- 
-        if calls[i][1] in time_dict:  # receiving telephone number
-            time_dict[calls[i][1]] += call_duration 
-                
-        else: 
-            time_dict[calls[i][1]] = call_duration
+       
+        time_dict[calls[i][0]] += call_duration
+        time_dict[calls[i][1]] += call_duration
     
-    phone_number = max(time_dict, key = time_dict.get)
-    
+    phone_number = max(time_dict, key = time_dict.get)   
     return phone_number, time_dict[phone_number] 
     
 phone_num, duration = longest_call_duration(calls)
