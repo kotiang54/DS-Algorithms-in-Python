@@ -12,7 +12,7 @@
  
  TASK 2:
  
- My solution to Task 2 consists of obtaining a list of calls durations using a 'for loop' that incurs a computation cost of order O(n), where n is the length of calls data. Also obtaining the maximum duration of calls from the list using python max function is of order O(n). 
+ My solution to Task 2 consists of obtaining a python dictionary of calls durations using a 'for loop' that incurs a computation cost of order O(n), where n is the length of calls data. Also obtaining the maximum duration of calls from the dictionary using python max function is of order O(n). 
  
  Therefore, my solution incurs a worst-case Big-O of O(n).
  
